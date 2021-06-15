@@ -5,7 +5,7 @@ export default function Banner() {
     return (
         <>
             <div className="banner-container">
-                <h2 className="text-center">BỘ MÔN PTTK-HTTT - KHOA CÔNG NGHỆ THÔNG TIN</h2>
+                <h1 className="text-center">BỘ MÔN PTTK-HTTT - KHOA CÔNG NGHỆ THÔNG TIN</h1>
                 <p className="text-center">Đây là đồ án môn học cho môn phân tích thiết kế hệ thống thông tin</p>
                 <div className="infor-container">
                     <div className="teacher-infor">
