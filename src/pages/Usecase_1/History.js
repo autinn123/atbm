@@ -1,10 +1,10 @@
 import React from 'react'
-import { Table,  Container, Col, Input, Button, Row } from 'reactstrap'
+import { Container, Row, Col, Button, Table, Input } from 'reactstrap'
 
-export default function HistoryList() {
+export default function History() {
     return (
         <Container>
-            <h1 className="text-center">THỐNG KÊ ĐĂNG KÍ MÔN HỌC</h1>
+            <h1 className="text-center">XEM THỐNG KÊ KHÓA HỌC</h1>
             <Row inline="true">
                 <Col md={5}>
                     <label>Từ</label>
@@ -32,32 +32,36 @@ export default function HistoryList() {
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Tên môn học</th>
-                        <th>Số học viên</th>
+                        <th>Mã khóa học</th>
+                        <th>Tên khóa học</th>
+                        <th>Số học viên đã đăng kí</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Phân tích thiết kế HTTT</td>
-                        <td>200</td>
+                        <td>001ABC</td>
+                        <td>Chương trình kỹ thuật viên</td>
+                        <td>80</td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>AT&BM trong hệ thông thông tin</td>
-                        <td>148</td>
+                        <td>001ABG</td>
+                        <td>Chương trình chuyên đề</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
-                        <td>Hê thống thông tin doanh nghiệp</td>
-                        <td>88</td>
+                        <td>101ABC</td>
+                        <td>Chương trình chứng chỉ A tin học</td>
+                        <td>120</td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
-                        <td>Phân tích và quản lý yêu cầu phần mềm</td>
-                        <td>48</td>
+                        <td>A01ABC</td>
+                        <td>Chương trình chứng chỉ B tin học</td>
+                        <td>60</td>
                     </tr>
-
                 </tbody>
             </Table>
         </Container>

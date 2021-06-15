@@ -15,7 +15,7 @@ export default function OpenList() {
                         <th>Học phí</th>
                         <th>Loại môn học</th>
                         <th>Nhóm môn học</th>
-                        <th>Chọn</th>
+                        <th>Tình trạng</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,6 +61,7 @@ export default function OpenList() {
                     </tr>
                 </tbody>
             </Table>
+            <a href="/subHistory">Xem thông kê đăng kí môn học ---</a>
         </>
     )
 }

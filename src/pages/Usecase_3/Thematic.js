@@ -8,7 +8,6 @@ export default function Thematic() {
         <>
             <h1 className="text-center">ĐĂNG KÍ CHUYÊN ĐỀ MỞ</h1>
             <OpenListTM />
-            <HistoryListTM />
         </>
     )
 }

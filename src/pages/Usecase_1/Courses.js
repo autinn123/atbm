@@ -39,7 +39,7 @@ export default function Courses() {
                 </tbody>
             </Table>
             <div className="history">
-                <a href="#">Xem thống kê khóa học trước --</a>
+                <a href="/cHistory">Xem thống kê khóa học trước --</a>
             </div>
         </Container>
     )

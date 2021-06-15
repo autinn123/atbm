@@ -13,7 +13,7 @@ export default function OpenListTM() {
                         <th>Tên chuyên đề</th>
                         <th>Học phí</th>
                         <th>Nhóm chuyên đề</th>
-                        <th>Chọn</th>
+                        <th>Tình trạng</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,6 +52,7 @@ export default function OpenListTM() {
 
                 </tbody>
             </Table>
+            <a href="/thmHistory">Xem thông kê đăng kí chuyên đề ---</a>
         </>
     )
 }

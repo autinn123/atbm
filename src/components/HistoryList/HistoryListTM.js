@@ -1,57 +1,66 @@
 import React from 'react'
-import { Table, Button } from 'reactstrap'
+import { Table,  Container, Col, Input, Button, Row } from 'reactstrap'
 
 export default function HistoryListTM() {
     return (
-        <>
-            <h2 className="mt-5 text-center">Danh sách chuyên đề đã đăng kí</h2>
-            <Table hover>
+        <Container>
+            <h1 className="text-center">THỐNG KÊ ĐĂNG KÍ CHUYÊN ĐỀ</h1>
+            <Row inline="true">
+                <Col md={5}>
+                    <label>Từ</label>
+                    <Input
+                        type="date"
+                        name="tuNgay"
+                        placeholder="date placeholder"
+                    />
+                </Col>
+                <Col md={5}>
+                    <label>Đến</label>
+                    <Input
+                        type="date"
+                        name="denNgay"
+                        placeholder="date placeholder"
+                    />
+                </Col>
+                <Col md={2}>
+                    <p></p>
+                    <Button color="success">Xem thống kê</Button>
+                </Col>
+            </Row>
+            <hr />
+            <Table bordered>
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Mã chuyên đề</th>
-                        <th>Tên chuyên đề</th>
-                        <th>Học phí</th>
-                        <th>Nhóm chuyên đề</th>
-                        <th>Chọn</th>
+                        <th>Chuyên đề</th>
+                        <th>Số học viên</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>AH0001</td>
-                        <td>Chuyên đề hệ quản trị</td>
-                        <td>1400000</td>
-                        <td>CNTT</td>
-                        <td><Button color="danger">Hủy</Button></td>
+                        <td>Chuyên đề hệ quản trị CSDL nâng cao</td>
+                        <td>148</td>
                     </tr>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>AH0001</td>
-                        <td>Chuyên đề hệ quản trị</td>
-                        <td>1400000</td>
-                        <td>CNTT</td>
-                        <td><Button color="danger">Hủy</Button></td>
+                        <th scope="row">2</th>
+                        <td>Chuyên đề nghiên cứu khoa học</td>
+                        <td>78</td>
+                        
                     </tr>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>AH0001</td>
-                        <td>Chuyên đề hệ quản trị</td>
-                        <td>1400000</td>
-                        <td>CNTT</td>
-                        <td><Button color="danger">Hủy</Button></td>
+                        <th scope="row">3</th>
+                        <td>Chuyên đề hệ thống thông tin nâng cao</td>
+                        <td>100</td>
                     </tr>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>AH0001</td>
-                        <td>Chuyên đề hệ quản trị</td>
-                        <td>1400000</td>
-                        <td>CNTT</td>
-                        <td><Button color="danger">Hủy</Button></td>
+                        <th scope="row">4</th>
+                        <td>Chuyên đề phân tích dữ liệu</td>
+                        <td>89</td>
                     </tr>
 
                 </tbody>
             </Table>
-        </>
+        </Container>
     )
 }
