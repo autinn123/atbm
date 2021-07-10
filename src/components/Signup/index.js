@@ -1,39 +1,47 @@
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap'
-import './SignUp.css'
+import swal from 'sweetalert';
+import './index.css'
 
 export default function SignUp() {
-    const [hoten, setHoten] = useState('');
-    const [sdt, setSdt] = useState('');
-    const [chuyennganh, setChuyennganh] = useState('');
-    const [ngaysinh, setNgaysinh] = useState('');
-    const [gioitinh, setGioitinh] = useState('Nam');
-    const [diachi, setDiachi] = useState('');
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [dob, setDob] = useState('');
+    const [gender, setGender] = useState('');
+    const [address, setAddress] = useState('');
 
-    const handleNameChange = (e) => setHoten(e.target.value)
-    const handleNumberChange = (e) => setSdt(e.target.value)
-    const handleSubjectChange = (e) => setChuyennganh(e.target.value)
-    const handleDateChange = (e) => setNgaysinh(e.target.value)
-    const handleSexChange = (e) => setGioitinh(e.target.value)
-    const handleAddressChange = (e) => setDiachi(e.target.value)
+    const handleNameChange = (e) => setName(e.target.value)
+    const handleNumberChange = (e) => setPhone(e.target.value)
+    const handleEmailChange = (e) => setEmail(e.target.value)
+    const handleDateChange = (e) => setDob(e.target.value)
+    const handleSexChange = (e) => setGender(e.target.value)
+    const handleAddressChange = (e) => setAddress(e.target.value)
 
-    console.log(gioitinh)
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            hoten: hoten,
-            sdt: sdt,
-            chuyennganh: chuyennganh,
-            ngaysinh: ngaysinh,
-            gioitinh: gioitinh,
-            diachi: diachi
+            name: name,
+            phone: phone,
+            email: email,
+            dob: dob,
+            gender: gender,
+            address: address
         })
     };
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        fetch('https://60c2d1e2917002001739d8e7.mockapi.io/hocvien/students', requestOptions)
-            .then(response => console.log(response))
+        console.log(name + phone + email, dob, gender, address);
+        const response = await fetch('http://localhost:3001/student/register', requestOptions);
+        const data = await response.json();
+
+        swal(
+            'Thành công!', 
+            `Bạn đã đăng ký hồ sơ thành công !`, 
+            'success'
+        );
 
     }
 
@@ -54,7 +62,7 @@ export default function SignUp() {
                         </FormGroup>
                         <FormGroup>
                             <Label for="email"><strong>Email</strong></Label>
-                            <Input type="text" name="email" placeholder="example@gmail.com" onChange={handleSubjectChange} />
+                            <Input type="text" name="email" placeholder="example@gmail.com" onChange={handleEmailChange} />
                         </FormGroup>
                         <FormGroup>
                             <Label for="ngaySinh"><strong>Ngày Sinh</strong></Label>
@@ -69,8 +77,8 @@ export default function SignUp() {
                         <FormGroup>
                             <Label for="gioiTinh"><strong>Giới tính</strong></Label>
                             <Input type="select" name="gioiTinh" id="gioiTinh" onChange={handleSexChange}>
-                                <option value="Name" >Nam</option>
-                                <option value="Nu">Nữ</option>
+                                <option value="Name">Nam</option>
+                                <option value="Nữ">Nữ</option>
                             </Input>
                         </FormGroup>
                         <FormGroup>

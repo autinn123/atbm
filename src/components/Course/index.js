@@ -99,9 +99,9 @@ class Courses extends React.Component{
                     </tbody>
                 </Table>
 
-                {/* <div className="history">
-                    <a href="/cHistory">Xem thống kê khóa học trước --</a>
-                </div> */}
+                <div className="history">
+                    <a href="/course-history">Xem thống kê khóa học trước --</a>
+                </div>
             </Container>
         )
     }

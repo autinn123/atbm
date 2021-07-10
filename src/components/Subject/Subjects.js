@@ -1,7 +1,7 @@
 import React from 'react'
 import './Subjects.css'
-import OpenList from '../../components/OpenList/OpenList'
-import HistoryList from '../../components/HistoryList/HistoryList'
+import OpenList from '../OpenList/OpenList'
+import HistoryList from '../HistoryList/HistoryList'
 
 export default function Subjects() {
     return (

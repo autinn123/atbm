@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css'
+import './index.css'
 
-export default function Navbar() {
+export default function HomeNavbar() {
     return (
         <>
             <nav className="navbar">
@@ -16,7 +16,7 @@ export default function Navbar() {
                                 Home
                         </Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to="/courses" className="nav-links">
                                 Courses
                         </Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
                             <Link to="/subjects" className="nav-links">
                                 Subjects
                         </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link to="/sign-up" className="nav-links">
                                 Sign Up

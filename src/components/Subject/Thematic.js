@@ -1,6 +1,6 @@
 import React from 'react'
-import HistoryListTM from '../../components/HistoryList/HistoryListTM'
-import OpenListTM from '../../components/OpenList/OpenListTM'
+import HistoryListTM from '../HistoryList/HistoryListTM'
+import OpenListTM from '../OpenList/OpenListTM'
 import './Subjects.css'
 
 export default function Thematic() {
