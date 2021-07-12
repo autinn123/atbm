@@ -1,10 +1,12 @@
 import React from 'react'
+import './Subjects.css'
 import { Table, Button } from 'reactstrap'
 
-export default function OpenList() {
+export default function Subject() {
     return (
         <>
-        <h2 className="mt-5 text-center">Danh sách môn có thể mở</h2>
+            <h1 className="text-center ">LẬP DANH SÁCH MÔN HỌC</h1>
+            <h2 className="mt-5 text-center">Danh sách môn có thể mở</h2>
             <Table hover>
                 <thead>
                     <tr>

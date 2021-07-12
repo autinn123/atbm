@@ -27,7 +27,7 @@ export default function StaffNavbar() {
                         </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/subjects" className="nav-links">
+                            <Link to="/majors-subjects" className="nav-links">
                                 Subjects
                         </Link>
                         </li>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Container, Alert } from 'reactstrap';
+import { Table, Button, Container } from 'reactstrap';
 import swal from 'sweetalert';
 
 class Courses extends React.Component{
@@ -37,31 +37,6 @@ class Courses extends React.Component{
     componentDidMount(){
         this.getChuongTrinh();
     }
-
-    // useEffect(() => {
-
-    //     const fetchData = async () => {
-            
-    //         try {
-    //             const url = "http://localhost:3001/courses";
-    //             const response = await fetch(url);
-    //             const responseJSON = await response.json();
-
-    //             // setChuongTrinh(chuongTrinh => {
-    //             //     return {...chuongTrinh, ...responseJSON};
-    //             // });
-    //             setChuongTrinh(responseJSON)
-    //             url = '';
-    //             console.log(chuongTrinh);
-    //         } catch (error) {
-    //             console.log("error", error);
-    //         }
-
-            
-    //     };
-
-    //     fetchData();
-    // }, []);
 
     render(){        
         return (

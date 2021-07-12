@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Button, Container } from 'reactstrap'
-import Subjects from './Subjects'
-import Thematic from './Thematic'
+import Subject from './Subject'
+import Major from './Major'
 
-export default function Main() {
+export default function MajorSubject() {
     const [mon, setMon] = useState(true)
     const handleClickMon = (e) => {
         setMon(true)
@@ -22,7 +22,7 @@ export default function Main() {
                 color={!mon ? 'primary' : 'secondary'}
                 onClick={handleClickCD}
             >Chuyên đề</Button>
-            {mon ? <Subjects /> : <Thematic />}
+            {mon ? <Subject /> : <Major />}
         </Container>
     )
 }
